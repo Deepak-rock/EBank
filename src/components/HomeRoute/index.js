@@ -1,29 +1,29 @@
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import './index.css'
 
 const HomeRoute = props => {
   const jwtToken = Cookies.get('jwt_token')
-  if (jwtToken === undefined) {
-    return <Redirect to="/login" />
-  }
-
   const onClickLogout = () => {
     const {history} = props
     Cookies.remove('jwt_token')
-    history.replace('/login')
+    history.replace('/ebank/login')
   }
-
+  if (jwtToken === undefined) {
+    return <Redirect to="/ebank/login" />
+  }
   return (
     <div className="home-container">
       <div className="responsive-container">
         <div className="header-container">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/ebank-logo-img.png"
-            alt="website logo"
-            className=""
-          />
+          <Link className="link" to="/">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/ebank-logo-img.png"
+              alt="website logo"
+              className="logo"
+            />
+          </Link>
           <button className="logout" type="button" onClick={onClickLogout}>
             Logout
           </button>

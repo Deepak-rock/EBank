@@ -1,0 +1,48 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #152850;
+  padding: 50px 30px;
+}
+.responsive-container {
+  width: 100%;
+  max-width: 1000px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 120px;
+}
+.logout {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: 1px solid #ffffff;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'roboto';
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+.home-heading {
+  font-size: 42px;
+  color: #f8fafc;
+  font-family: 'roboto';
+  font-weight: bold;
+}
+.card-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
